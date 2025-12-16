@@ -1,8 +1,9 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
-import { Search, MapPin, Users, Briefcase } from "lucide-react";
+import { Search, MapPin, Users, Briefcase, Building } from "lucide-react";
 import teamImage from "@assets/generated_images/professional_financial_team_meeting_in_glass_office.png";
+import officeImage from "@assets/generated_images/elegant_financial_office_reception_area.png";
 
 export default function About() {
   return (
@@ -63,7 +64,7 @@ export default function About() {
         </section>
 
         {/* Team Grid */}
-        <section className="bg-slate-50 py-24">
+        <section id="team" className="bg-slate-50 py-24 scroll-mt-20">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-serif font-bold text-primary mb-4">Leadership Team</h2>
@@ -100,8 +101,54 @@ export default function About() {
           </div>
         </section>
 
+        {/* Offices Section */}
+        <section id="offices" className="py-24 container mx-auto px-6 scroll-mt-20">
+           <div className="flex flex-col md:flex-row gap-12 items-center">
+              <div className="md:w-1/2">
+                 <div className="relative rounded-lg overflow-hidden shadow-2xl">
+                    <img src={officeImage} alt="London Office" className="w-full h-full object-cover" />
+                 </div>
+              </div>
+              <div className="md:w-1/2">
+                 <h2 className="text-3xl font-serif font-bold text-primary mb-8">Our Offices</h2>
+                 <div className="space-y-8">
+                    <div className="flex gap-4">
+                       <div className="bg-accent/10 p-3 h-fit rounded-lg">
+                          <Building className="h-6 w-6 text-accent" />
+                       </div>
+                       <div>
+                          <h3 className="font-bold text-lg">London HQ</h3>
+                          <p className="text-muted-foreground">123 Financial District, Canary Wharf, London, E14 5AB</p>
+                          <p className="text-sm text-primary font-medium mt-1">+44 (0) 20 7123 4567</p>
+                       </div>
+                    </div>
+                    <div className="flex gap-4">
+                       <div className="bg-accent/10 p-3 h-fit rounded-lg">
+                          <Building className="h-6 w-6 text-accent" />
+                       </div>
+                       <div>
+                          <h3 className="font-bold text-lg">Edinburgh</h3>
+                          <p className="text-muted-foreground">45 George Street, Edinburgh, EH2 2HT</p>
+                          <p className="text-sm text-primary font-medium mt-1">+44 (0) 131 456 7890</p>
+                       </div>
+                    </div>
+                    <div className="flex gap-4">
+                       <div className="bg-accent/10 p-3 h-fit rounded-lg">
+                          <Building className="h-6 w-6 text-accent" />
+                       </div>
+                       <div>
+                          <h3 className="font-bold text-lg">Manchester</h3>
+                          <p className="text-muted-foreground">Spinningfields Square, Manchester, M3 3AP</p>
+                          <p className="text-sm text-primary font-medium mt-1">+44 (0) 161 789 0123</p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </section>
+
         {/* CTA */}
-        <section className="py-20 bg-primary text-white text-center">
+        <section id="careers" className="py-20 bg-primary text-white text-center scroll-mt-20">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl font-serif font-bold mb-6">Join Our Growing Team</h2>
             <p className="text-white/70 max-w-2xl mx-auto mb-8">
