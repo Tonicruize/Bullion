@@ -24,7 +24,7 @@ export default function Insights() {
     },
     {
       category: "News",
-      title: "Capital Bonds Group Expands Sustainable Energy Portfolio",
+      title: "Elite Bonds Group Expands Sustainable Energy Portfolio",
       excerpt: "We are proud to announce the addition of three new green energy infrastructure bonds to our core offering.",
       date: "Nov 15, 2024",
       author: "Press Team",

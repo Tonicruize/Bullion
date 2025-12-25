@@ -46,7 +46,7 @@ export function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className={cn("font-serif text-xl font-bold tracking-tight leading-none transition-colors", isTransparent ? "text-white" : "text-foreground")}>
-                CAPITAL BONDS
+                ELITE BONDS
               </span>
               <span className={cn("text-[0.65rem] uppercase tracking-[0.2em] font-medium transition-colors", isTransparent ? "text-white/80" : "text-muted-foreground")}>
                 GROUP

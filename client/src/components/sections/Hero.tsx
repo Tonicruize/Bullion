@@ -88,7 +88,7 @@ export function Introduction() {
         <div className="flex flex-col lg:flex-row gap-20 items-center">
            <div className="lg:w-1/2 relative">
               <div className="relative z-10 rounded-sm overflow-hidden shadow-2xl">
-                 <img src={officeImage} alt="Capital Bonds Group Office" className="w-full h-auto" />
+                 <img src={officeImage} alt="Elite Bonds Group Office" className="w-full h-auto" />
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-6 -left-6 w-full h-full border-2 border-accent/20 z-0" />
@@ -109,7 +109,7 @@ export function Introduction() {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                  <p>
-                    In an era of economic volatility, Capital Bonds Group stands as a bastion of stability. We specialise in identifying, structuring, and managing high-yield fixed-income opportunities that are typically reserved for institutional investors.
+                    In an era of economic volatility, Elite Bonds Group stands as a bastion of stability. We specialise in identifying, structuring, and managing high-yield fixed-income opportunities that are typically reserved for institutional investors.
                  </p>
                  <p>
                     Our philosophy is simple: <strong>Capital preservation constitutes the foundation of wealth creation.</strong> We do not chase speculative trends. Instead, we focus on tangible assets, robust covenants, and transparent cash flows.

@@ -9,7 +9,7 @@ export function Footer() {
           <div className="md:col-span-1 space-y-6">
             <div className="flex items-center gap-2">
               <Shield className="h-6 w-6 text-accent" />
-              <span className="font-serif text-lg font-bold">CAPITAL BONDS GROUP</span>
+              <span className="font-serif text-lg font-bold">ELITE BONDS GROUP</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
               Premier investment solutions for the modern investor. Providing stability, growth, and trust since 2008.
@@ -49,7 +49,7 @@ export function Footer() {
                Have questions? Our team is available Mon-Fri, 9am-6pm.
              </p>
              <p className="text-accent text-lg font-medium mb-2">+44 (0) 20 7123 4567</p>
-             <p className="text-slate-400 text-sm">info@capitalbondsgroup.com</p>
+             <p className="text-slate-400 text-sm">info@elitebondsgroup.com</p>
           </div>
         </div>
 
@@ -58,10 +58,10 @@ export function Footer() {
             <strong>Risk Warning:</strong> Investment involves risk. The value of investments and the income from them can go down as well as up and you may not get back the amount originally invested. Past performance is not a reliable indicator of future performance. The information provided on this website is for information purposes only and does not constitute financial advice. We recommend that you seek independent financial advice before making any investment decisions.
           </p>
           <p>
-            Capital Bonds Group is a trading name of CBG Holdings Ltd, registered in England and Wales (Company No. 12345678). Registered Office: 123 Financial District, Canary Wharf, London, E14 5AB.
+            Elite Bonds Group is a trading name of EBG Holdings Ltd, registered in England and Wales (Company No. 12345678). Registered Office: 123 Financial District, Canary Wharf, London, E14 5AB.
           </p>
           <div className="mt-8 text-center pt-8 border-t border-white/5">
-             &copy; {new Date().getFullYear()} Capital Bonds Group. All rights reserved.
+             &copy; {new Date().getFullYear()} Elite Bonds Group. All rights reserved.
           </div>
         </div>
       </div>

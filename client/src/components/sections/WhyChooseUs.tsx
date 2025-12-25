@@ -15,7 +15,7 @@ export function WhyChooseUs() {
           <div className="lg:w-1/2 space-y-8">
             <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">
               Why Investors Trust <br />
-              <span className="text-accent">Capital Bonds Group</span>
+              <span className="text-accent">Elite Bonds Group</span>
             </h2>
             <p className="text-lg text-white/80 leading-relaxed">
               In a landscape of uncertainty, we offer clarity. Our rigorous due diligence process and partnership with top-tier financial institutions ensure that your capital is deployed with the utmost care and strategy.

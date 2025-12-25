@@ -32,7 +32,7 @@ export default function About() {
               <h2 className="text-4xl font-serif font-bold text-primary mb-6">More Than Just Investment Managers</h2>
               <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  Founded in 2008 during the global financial crisis, Capital Bonds Group emerged with a singular mission: to provide investors with a safe harbor in turbulent times.
+                  Founded in 2008 during the global financial crisis, Elite Bonds Group emerged with a singular mission: to provide investors with a safe harbor in turbulent times.
                 </p>
                 <p>
                   We believe that capital preservation should never come at the expense of growth. By focusing on asset-backed fixed-income securities, we bridge the gap between low-yield savings accounts and high-volatility equity markets.

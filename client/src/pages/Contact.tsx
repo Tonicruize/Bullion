@@ -49,7 +49,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <div className="font-bold text-foreground">Email</div>
-                      <div className="text-muted-foreground">invest@capitalbondsgroup.com</div>
+                      <div className="text-muted-foreground">invest@elitebondsgroup.com</div>
                       <div className="text-xs text-muted-foreground mt-1">We aim to respond within 24 hours</div>
                     </div>
                   </div>
