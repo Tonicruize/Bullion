@@ -154,3 +154,77 @@ export function TradingViewMiniChart({ symbol = "FX:EURUSD", description = "Euro
       </div>
     );
   }
+
+export function TradingViewStockHeatmap() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const script = document.createElement("script");
+      script.src = "https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js";
+      script.async = true;
+      script.innerHTML = JSON.stringify({
+        "exchanges": [],
+        "dataSource": "SPX500",
+        "grouping": "sector",
+        "blockSize": "market_cap_basic",
+        "blockColor": "change",
+        "locale": "en",
+        "symbolUrl": "",
+        "colorTheme": "light",
+        "hasTopBar": false,
+        "isDataSetEnabled": false,
+        "isZoomEnabled": true,
+        "hasSymbolTooltip": true,
+        "width": "100%",
+        "height": "100%"
+      });
+      containerRef.current.innerHTML = "";
+      containerRef.current.appendChild(script);
+    }
+  }, []);
+
+  return (
+    <div className="tradingview-widget-container w-full h-full" ref={containerRef}>
+      <div className="tradingview-widget-container__widget"></div>
+    </div>
+  );
+}
+
+export function TradingViewForexHeatmap() {
+    const containerRef = useRef<HTMLDivElement>(null);
+  
+    useEffect(() => {
+      if (containerRef.current) {
+        const script = document.createElement("script");
+        script.src = "https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js";
+        script.async = true;
+        script.innerHTML = JSON.stringify({
+            "width": "100%",
+            "height": "100%",
+            "currencies": [
+              "EUR",
+              "USD",
+              "JPY",
+              "GBP",
+              "CHF",
+              "AUD",
+              "CAD",
+              "NZD",
+              "CNY"
+            ],
+            "isTransparent": false,
+            "colorTheme": "light",
+            "locale": "en"
+          });
+        containerRef.current.innerHTML = "";
+        containerRef.current.appendChild(script);
+      }
+    }, []);
+  
+    return (
+      <div className="tradingview-widget-container w-full h-full" ref={containerRef}>
+        <div className="tradingview-widget-container__widget"></div>
+      </div>
+    );
+  }

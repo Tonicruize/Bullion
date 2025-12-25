@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Newspaper } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { TradingViewTickerTape, TradingViewMarketOverview } from "@/components/ui/tradingview-widget";
+import { TradingViewTickerTape, TradingViewMarketOverview, TradingViewStockHeatmap, TradingViewForexHeatmap } from "@/components/ui/tradingview-widget";
 
 export default function Home() {
   return (
@@ -17,11 +17,6 @@ export default function Home() {
       
       {/* Ticker Tape at the top, below Navbar */}
       <div className="fixed top-0 left-0 right-0 z-40 mt-[72px] lg:mt-[88px] opacity-95">
-         {/* Adjust margin top based on navbar height which changes on scroll, but fixed is easier. 
-             Actually, navbar is fixed. Let's put this inside main or just below navbar.
-             If navbar is fixed, this should be fixed too? No, it scrolls away. 
-             Let's put it as the first element of main and add padding-top to main.
-         */}
       </div>
 
       <main className="flex-grow pt-[80px]"> {/* Added padding-top to account for fixed navbar */}
@@ -106,6 +101,37 @@ export default function Home() {
         </section>
 
         <WhyChooseUs />
+
+        {/* Market Heatmaps Section */}
+        <section className="py-24 bg-slate-50 border-t border-border">
+          <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-serif font-bold text-primary mb-12 text-center">Market Heatmaps</h2>
+            
+            <div className="space-y-16">
+              {/* Stock Heatmap */}
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                   <div className="h-8 w-1 bg-accent rounded-full"></div>
+                   <h3 className="text-2xl font-serif font-bold text-foreground">Equities Performance</h3>
+                </div>
+                <div className="bg-white p-2 rounded-xl shadow-lg border border-border/50 h-[600px] overflow-hidden">
+                  <TradingViewStockHeatmap />
+                </div>
+              </div>
+
+              {/* Forex Heatmap */}
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                   <div className="h-8 w-1 bg-accent rounded-full"></div>
+                   <h3 className="text-2xl font-serif font-bold text-foreground">Forex Cross Rates</h3>
+                </div>
+                <div className="bg-white p-2 rounded-xl shadow-lg border border-border/50 h-[500px] overflow-hidden">
+                  <TradingViewForexHeatmap />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         
         {/* Latest News Preview */}
         <section className="py-24 bg-white">
