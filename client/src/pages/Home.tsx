@@ -107,6 +107,28 @@ export default function Home() {
 
         <WhyChooseUs />
 
+        {/* Ready to Join Us Section */}
+        <section className="py-24 bg-primary text-white relative overflow-hidden">
+           {/* Background decorative elements */}
+           <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform origin-top-right"></div>
+           <div className="absolute bottom-0 left-0 w-1/3 h-full bg-accent/10 -skew-x-12 transform origin-bottom-left"></div>
+           
+           <div className="container mx-auto px-6 relative z-10 text-center">
+              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Ready to Join Us?</h2>
+              <p className="text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
+                 Take the next step towards securing your financial future. Partner with a team dedicated to your growth and stability.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                 <Button className="bg-accent hover:bg-accent/90 text-white px-10 py-7 text-lg font-semibold shadow-xl rounded-sm">
+                    Open an Account Today <ArrowRight className="ml-2 h-5 w-5" />
+                 </Button>
+                 <Button variant="outline" className="border-white/30 text-white hover:bg-white hover:text-primary px-10 py-7 text-lg font-semibold rounded-sm backdrop-blur-sm">
+                    Schedule a Consultation
+                 </Button>
+              </div>
+           </div>
+        </section>
+
         {/* Market Heatmaps Section */}
         <section className="py-24 bg-slate-50 border-t border-border">
           <div className="container mx-auto px-6">
