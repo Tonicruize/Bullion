@@ -27,7 +27,7 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isTransparent = !isScrolled && location === "/";
+  const isTransparent = false;
 
   return (
     <nav
