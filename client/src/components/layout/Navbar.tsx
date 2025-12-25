@@ -1,8 +1,9 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Shield, Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import logoImage from "@assets/generated_images/luxury_gold_geometric_shield_logo_on_navy_blue.png";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -41,8 +42,8 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/">
           <a className="flex items-center gap-3 group relative z-50">
-            <div className={cn("p-2 rounded-sm transition-colors duration-300", isTransparent ? "bg-white/10 group-hover:bg-white/20" : "bg-primary/5 group-hover:bg-primary/10")}>
-              <Shield className={cn("h-8 w-8 transition-colors", isTransparent ? "text-white" : "text-primary")} strokeWidth={1.5} />
+            <div className={cn("rounded-sm overflow-hidden transition-all duration-300", isTransparent ? "shadow-lg" : "")}>
+              <img src={logoImage} alt="Elite Bonds Group Logo" className="h-10 w-10 object-contain" />
             </div>
             <div className="flex flex-col">
               <span className={cn("font-serif text-xl font-bold tracking-tight leading-none transition-colors", isTransparent ? "text-white" : "text-foreground")}>
@@ -72,7 +73,7 @@ export function Navbar() {
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-primary/50 to-primary p-6 no-underline outline-none focus:shadow-md"
                           href="/solutions"
                         >
-                          <Shield className="h-6 w-6 text-white mb-4" />
+                          <img src={logoImage} className="h-10 w-10 mb-4 opacity-80 mix-blend-screen" alt="" />
                           <div className="mb-2 mt-4 text-lg font-medium text-white">
                             Investment Products
                           </div>

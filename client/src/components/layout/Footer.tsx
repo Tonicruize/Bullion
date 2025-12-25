@@ -1,4 +1,5 @@
 import { Shield } from "lucide-react";
+import logoImage from "@assets/generated_images/luxury_gold_geometric_shield_logo_on_navy_blue.png";
 
 export function Footer() {
   return (
@@ -8,7 +9,9 @@ export function Footer() {
           
           <div className="md:col-span-1 space-y-6">
             <div className="flex items-center gap-2">
-              <Shield className="h-6 w-6 text-accent" />
+              <div className="rounded-sm overflow-hidden">
+                <img src={logoImage} alt="Elite Bonds Group" className="h-8 w-8 object-contain" />
+              </div>
               <span className="font-serif text-lg font-bold">ELITE BONDS GROUP</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
