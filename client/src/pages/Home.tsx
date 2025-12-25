@@ -8,15 +8,48 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Newspaper } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { TradingViewTickerTape, TradingViewMarketOverview } from "@/components/ui/tradingview-widget";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col font-sans text-foreground bg-background selection:bg-accent/30">
       <Navbar />
-      <main className="flex-grow">
+      
+      {/* Ticker Tape at the top, below Navbar */}
+      <div className="fixed top-0 left-0 right-0 z-40 mt-[72px] lg:mt-[88px] opacity-95">
+         {/* Adjust margin top based on navbar height which changes on scroll, but fixed is easier. 
+             Actually, navbar is fixed. Let's put this inside main or just below navbar.
+             If navbar is fixed, this should be fixed too? No, it scrolls away. 
+             Let's put it as the first element of main and add padding-top to main.
+         */}
+      </div>
+
+      <main className="flex-grow pt-[80px]"> {/* Added padding-top to account for fixed navbar */}
+        
+        {/* TradingView Ticker Tape */}
+        <div className="w-full h-[46px] overflow-hidden bg-background border-b border-border z-30 relative">
+           <TradingViewTickerTape />
+        </div>
+
         <Hero />
         <Introduction />
         <Stats />
+        
+        {/* Market Overview Section */}
+        <section className="py-20 bg-slate-50 border-y border-border/50">
+           <div className="container mx-auto px-6">
+              <div className="text-center mb-12">
+                 <h2 className="text-3xl font-serif font-bold text-primary mb-4">Global Market Pulse</h2>
+                 <p className="text-muted-foreground max-w-2xl mx-auto">
+                    Stay connected to the world's financial heartbeat. Monitor key indices, commodities, and bond yields in real-time to make informed decisions.
+                 </p>
+              </div>
+              <div className="bg-white p-4 rounded-xl shadow-lg border border-border/50 h-[550px]">
+                 <TradingViewMarketOverview />
+              </div>
+           </div>
+        </section>
+
         <Services />
         
         {/* Featured Opportunities Preview */}
