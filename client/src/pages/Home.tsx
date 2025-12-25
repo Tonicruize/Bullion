@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Newspaper } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 import { TradingViewTickerTape, TradingViewMarketOverview, TradingViewStockHeatmap, TradingViewForexHeatmap } from "@/components/ui/tradingview-widget";
 
 export default function Home() {
@@ -60,39 +61,43 @@ export default function Home() {
                  </Button>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                  {[
-                    { title: "Strategic Corporate Bond IV", rate: "8.5%", term: "3 Years", status: "Open" },
-                    { title: "Green Energy Infrastructure", rate: "7.2%", term: "4 Years", status: "Open" },
-                    { title: "Prime UK Property Debt", rate: "9.0%", term: "24 Months", status: "Limited" }
+                    { title: "Products and Stocks", rate: "1.2% Daily", term: "14 Days", minInvest: "$1,000", color: "bg-blue-500" },
+                    { title: "Company Properties", rate: "1.9% Daily", term: "14 Days", minInvest: "$5,000", color: "bg-emerald-500", popular: true },
+                    { title: "Private Real Estate", rate: "2.0% Daily", term: "14 Days", minInvest: "$10,000", color: "bg-amber-500" },
+                    { title: "Private Infrastructure", rate: "2.2% Daily", term: "14 Days", minInvest: "$50,000", color: "bg-purple-600" }
                  ].map((item, i) => (
-                    <Card key={i} className="group hover:shadow-xl transition-all duration-300 border-border/50">
-                       <CardHeader>
-                          <div className="flex justify-between items-start mb-4">
-                             <Badge variant={item.status === "Limited" ? "destructive" : "secondary"}>{item.status}</Badge>
-                             <div className="text-right">
-                                <div className="text-3xl font-bold text-primary">{item.rate}</div>
-                                <div className="text-xs text-muted-foreground">Target Return</div>
-                             </div>
+                    <Card key={i} className={cn("group hover:shadow-2xl transition-all duration-300 border-border/50 relative overflow-hidden flex flex-col", item.popular && "border-accent shadow-lg")}>
+                       {item.popular && (
+                          <div className="absolute top-3 right-3 z-10">
+                             <Badge className="bg-accent text-white hover:bg-accent">Popular</Badge>
                           </div>
-                          <CardTitle className="font-serif text-xl group-hover:text-accent transition-colors">{item.title}</CardTitle>
+                       )}
+                       <div className={`h-1.5 w-full ${item.color}`} />
+                       <CardHeader className="pb-2">
+                          <CardTitle className="font-serif text-lg group-hover:text-primary transition-colors h-[48px] flex items-center">{item.title}</CardTitle>
+                          <div className="mt-4">
+                             <div className="text-3xl font-bold text-primary">{item.rate}</div>
+                             <div className="text-xs text-muted-foreground uppercase tracking-wide">Target Return</div>
+                          </div>
                        </CardHeader>
-                       <CardContent className="text-sm text-muted-foreground space-y-2">
+                       <CardContent className="text-sm text-muted-foreground space-y-3 flex-grow">
                           <div className="flex justify-between border-b border-border/50 py-2">
-                             <span>Term</span>
+                             <span>Duration</span>
                              <span className="font-semibold text-foreground">{item.term}</span>
                           </div>
                           <div className="flex justify-between border-b border-border/50 py-2">
-                             <span>Security</span>
-                             <span className="font-semibold text-foreground">First Legal Charge</span>
+                             <span>Min. Deposit</span>
+                             <span className="font-semibold text-foreground">{item.minInvest}</span>
                           </div>
                           <div className="flex justify-between border-b border-border/50 py-2">
-                             <span>Min. Investment</span>
-                             <span className="font-semibold text-foreground">£10,000</span>
+                             <span>Withdrawals</span>
+                             <span className="font-semibold text-foreground">Daily</span>
                           </div>
                        </CardContent>
-                       <CardFooter>
-                          <Button className="w-full bg-primary group-hover:bg-accent transition-colors">Request Info</Button>
+                       <CardFooter className="pt-2">
+                          <Button className="w-full bg-primary group-hover:bg-accent transition-colors">View Details</Button>
                        </CardFooter>
                     </Card>
                  ))}

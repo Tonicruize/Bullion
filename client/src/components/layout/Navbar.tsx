@@ -62,38 +62,11 @@ export function Navbar() {
             <NavigationMenuList className={cn("gap-2", isTransparent ? "text-white" : "text-foreground")}>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger className={cn("bg-transparent hover:bg-white/10 hover:text-accent focus:bg-white/10 data-[active]:bg-white/10 data-[state=open]:bg-white/10", !isTransparent && "hover:bg-muted focus:bg-muted data-[active]:bg-muted data-[state=open]:bg-muted text-foreground")}>
-                  Investment Solutions
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                    <li className="row-span-3">
-                      <NavigationMenuLink asChild>
-                        <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-primary/50 to-primary p-6 no-underline outline-none focus:shadow-md"
-                          href="/solutions"
-                        >
-                          <img src={logoImage} className="h-10 w-10 mb-4 opacity-80 mix-blend-screen" alt="" />
-                          <div className="mb-2 mt-4 text-lg font-medium text-white">
-                            Investment Products
-                          </div>
-                          <p className="text-sm leading-tight text-white/90">
-                            Explore our range of fixed-rate bonds designed for capital preservation and growth.
-                          </p>
-                        </a>
-                      </NavigationMenuLink>
-                    </li>
-                    <ListItem href="/solutions#corporate" title="Corporate Bonds">
-                      Fixed income from established UK entities.
-                    </ListItem>
-                    <ListItem href="/solutions#green" title="Green Energy">
-                      Sustainable investments with government backing.
-                    </ListItem>
-                    <ListItem href="/solutions#property" title="Property Bonds">
-                      High-yield asset-backed development loans.
-                    </ListItem>
-                  </ul>
-                </NavigationMenuContent>
+                <Link href="/solutions">
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 hover:text-accent cursor-pointer", !isTransparent && "hover:bg-muted text-foreground")}>
+                    Investment Solutions
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
