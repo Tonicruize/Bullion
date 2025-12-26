@@ -120,14 +120,14 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-4">
-          <Link href="/login">
+          <a href="https://app.elitebondsgroup.com/login">
             <Button 
               variant="ghost" 
               className={cn("font-medium", !isTransparent ? "text-foreground hover:bg-muted" : "text-white hover:bg-white/10 hover:text-white")}
             >
               Client Login
             </Button>
-          </Link>
+          </a>
           <Link href="/contact">
             <Button className="bg-accent hover:bg-accent/90 text-white font-medium px-6 shadow-lg shadow-accent/20 border border-white/10">
               Enquire Now
@@ -180,9 +180,9 @@ export function Navbar() {
               </Link>
 
               <div className="mt-auto pt-8 flex flex-col gap-4">
-                <Link href="/login">
+                <a href="https://app.elitebondsgroup.com/login" className="w-full">
                   <Button variant="outline" className="w-full h-12 text-lg font-medium border-primary/20 hover:bg-muted" onClick={() => setMobileMenuOpen(false)}>Client Login</Button>
-                </Link>
+                </a>
                 <Link href="/contact">
                   <Button className="w-full h-12 text-lg bg-accent text-white hover:bg-accent/90 shadow-lg font-medium" onClick={() => setMobileMenuOpen(false)}>Enquire Now</Button>
                 </Link>

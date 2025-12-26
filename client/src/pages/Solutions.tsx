@@ -121,9 +121,11 @@ export default function Solutions() {
                 </CardContent>
                 
                 <CardFooter className="pt-0">
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-lg h-12 shadow-lg hover:shadow-xl transition-all">
-                    Invest Now
-                  </Button>
+                  <a href="https://app.elitebondsgroup.com/register" className="w-full">
+                    <Button className="w-full bg-primary hover:bg-primary/90 text-lg h-12 shadow-lg hover:shadow-xl transition-all">
+                      Invest Now
+                    </Button>
+                  </a>
                 </CardFooter>
               </Card>
             ))}
@@ -163,9 +165,11 @@ export default function Solutions() {
                    <p className="text-white/70 mb-8 leading-relaxed">
                      Join Elite Bonds Group and partner with us in shaping a future of growth and impact.
                    </p>
-                   <Button className="bg-accent text-white hover:bg-accent/90 w-full md:w-auto h-12 px-8 text-lg font-semibold">
-                     Open an Account <ArrowRight className="ml-2 h-4 w-4" />
-                   </Button>
+                   <a href="https://app.elitebondsgroup.com/register">
+                     <Button className="bg-accent text-white hover:bg-accent/90 w-full md:w-auto h-12 px-8 text-lg font-semibold">
+                       Open an Account <ArrowRight className="ml-2 h-4 w-4" />
+                     </Button>
+                   </a>
                 </div>
               </div>
             </div>

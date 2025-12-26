@@ -119,9 +119,11 @@ export default function Home() {
                  Take the next step towards securing your financial future. Partner with a team dedicated to your growth and stability.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                 <Button className="bg-accent hover:bg-accent/90 text-white px-10 py-7 text-lg font-semibold shadow-xl rounded-sm">
-                    Open an Account Today <ArrowRight className="ml-2 h-5 w-5" />
-                 </Button>
+                 <a href="https://app.elitebondsgroup.com/register">
+                    <Button className="bg-accent hover:bg-accent/90 text-white px-10 py-7 text-lg font-semibold shadow-xl rounded-sm">
+                       Open an Account Today <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                 </a>
                  <Button variant="outline" className="border-white/30 text-white hover:bg-white hover:text-primary px-10 py-7 text-lg font-semibold rounded-sm backdrop-blur-sm">
                     Schedule a Consultation
                  </Button>
@@ -206,9 +208,11 @@ export default function Home() {
                     Join an exclusive community of investors who prioritize security, transparency, and consistent returns.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                   <Button className="bg-accent text-white px-10 py-6 rounded-sm text-lg font-semibold hover:bg-accent/90 transition-colors shadow-lg">
-                       Request Information Pack
-                   </Button>
+                   <a href="https://app.elitebondsgroup.com/register">
+                     <Button className="bg-accent text-white px-10 py-6 rounded-sm text-lg font-semibold hover:bg-accent/90 transition-colors shadow-lg">
+                         Open an Account
+                     </Button>
+                   </a>
                    <Button variant="outline" className="border-white/20 text-white px-10 py-6 rounded-sm text-lg font-semibold hover:bg-white hover:text-primary transition-colors">
                        Speak to an Advisor
                    </Button>
