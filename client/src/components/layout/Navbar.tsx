@@ -13,6 +13,13 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -129,72 +136,61 @@ export function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button
-          className="lg:hidden p-2 text-foreground relative z-50"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? (
-            <X className={cn("h-6 w-6 text-foreground")} />
-          ) : (
-            <Menu className={cn("h-6 w-6 transition-colors", isTransparent ? "text-white" : "text-foreground")} />
-          )}
-        </button>
-      </div>
-
-      {/* Mobile Menu Overlay */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[100] bg-background backdrop-blur-xl animate-in slide-in-from-right-10 flex flex-col">
-          {/* Header for Mobile Menu */}
-          <div className="flex items-center justify-between px-6 py-6 border-b border-border/50">
-            <Link href="/">
-              <a className="flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
-                 <img src={logoImage} alt="Elite Bonds Group Logo" className="h-6 w-auto object-contain" />
-              </a>
-            </Link>
+        <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+          <SheetTrigger asChild>
             <button
-              className="p-2 text-foreground"
-              onClick={() => setMobileMenuOpen(false)}
+              className="lg:hidden p-2 text-foreground relative z-50 focus:outline-none"
             >
-              <X className="h-6 w-6" />
+              <Menu className={cn("h-6 w-6 transition-colors", isTransparent ? "text-white" : "text-foreground")} />
             </button>
-          </div>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-full sm:w-[400px] p-0 border-l border-border/50 bg-background/95 backdrop-blur-xl z-[150]">
+            <SheetHeader className="flex items-center justify-between px-6 py-6 border-b border-border/50">
+               <SheetTitle className="sr-only">Mobile Navigation</SheetTitle>
+               <Link href="/">
+                  <a className="flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
+                     <img src={logoImage} alt="Elite Bonds Group Logo" className="h-6 w-auto object-contain" />
+                  </a>
+               </Link>
+            </SheetHeader>
 
-          <div className="flex flex-col gap-6 px-6 pt-8 pb-12 overflow-y-auto">
-            <Link href="/solutions">
-              <a className="text-xl font-serif font-bold text-foreground hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>Investment Solutions</a>
-            </Link>
-            
-            <Link href="/about">
-              <a className="text-xl font-serif font-bold text-foreground hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>About Us</a>
-            </Link>
-            <div className="flex flex-col gap-3 pl-4 border-l-2 border-accent/20 ml-2">
-               <Link href="/about#team"><a className="text-base text-muted-foreground hover:text-foreground transition-colors" onClick={() => setMobileMenuOpen(false)}>Our Team</a></Link>
-               <Link href="/about#offices"><a className="text-base text-muted-foreground hover:text-foreground transition-colors" onClick={() => setMobileMenuOpen(false)}>Global Offices</a></Link>
-            </div>
-
-            <Link href="/approach">
-              <a className="text-xl font-serif font-bold text-foreground hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>Our Approach</a>
-            </Link>
-            
-            <Link href="/insights">
-              <a className="text-xl font-serif font-bold text-foreground hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>Insights</a>
-            </Link>
-            
-            <Link href="/contact">
-              <a className="text-xl font-serif font-bold text-foreground hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-            </Link>
-
-            <div className="mt-auto pt-8 flex flex-col gap-4">
-              <Link href="/login">
-                <Button variant="outline" className="w-full h-12 text-lg font-medium border-primary/20 hover:bg-muted">Client Login</Button>
+            <div className="flex flex-col gap-6 px-6 pt-8 pb-12 overflow-y-auto h-[calc(100vh-80px)]">
+              <Link href="/solutions">
+                <a className="text-xl font-serif font-bold text-foreground hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>Investment Solutions</a>
               </Link>
+              
+              <Link href="/about">
+                <a className="text-xl font-serif font-bold text-foreground hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>About Us</a>
+              </Link>
+              <div className="flex flex-col gap-3 pl-4 border-l-2 border-accent/20 ml-2">
+                 <Link href="/about#team"><a className="text-base text-muted-foreground hover:text-foreground transition-colors" onClick={() => setMobileMenuOpen(false)}>Our Team</a></Link>
+                 <Link href="/about#offices"><a className="text-base text-muted-foreground hover:text-foreground transition-colors" onClick={() => setMobileMenuOpen(false)}>Global Offices</a></Link>
+              </div>
+
+              <Link href="/approach">
+                <a className="text-xl font-serif font-bold text-foreground hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>Our Approach</a>
+              </Link>
+              
+              <Link href="/insights">
+                <a className="text-xl font-serif font-bold text-foreground hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>Insights</a>
+              </Link>
+              
               <Link href="/contact">
-                <Button className="w-full h-12 text-lg bg-accent text-white hover:bg-accent/90 shadow-lg font-medium">Enquire Now</Button>
+                <a className="text-xl font-serif font-bold text-foreground hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact</a>
               </Link>
+
+              <div className="mt-auto pt-8 flex flex-col gap-4">
+                <Link href="/login">
+                  <Button variant="outline" className="w-full h-12 text-lg font-medium border-primary/20 hover:bg-muted" onClick={() => setMobileMenuOpen(false)}>Client Login</Button>
+                </Link>
+                <Link href="/contact">
+                  <Button className="w-full h-12 text-lg bg-accent text-white hover:bg-accent/90 shadow-lg font-medium" onClick={() => setMobileMenuOpen(false)}>Enquire Now</Button>
+                </Link>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          </SheetContent>
+        </Sheet>
+      </div>
     </nav>
   );
 }

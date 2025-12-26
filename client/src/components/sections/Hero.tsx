@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, TrendingUp, Building2, Globe, Shield, Scale, Clock, Award, FileText } from "lucide-react";
 import heroImage from "@assets/generated_images/modern_london_financial_district_skyline_at_dusk_with_blue_and_gold_tones.png";
-import officeImage from "@assets/generated_images/modern_office_reception_with_elite_bonds_group_gold_logo.png";
+import officeImage from "@assets/auth-banner_1766754930923.jpg";
 import certificateImage from "@assets/generated_images/certificate_of_incorporation_for_elite_bonds_group.png";
 import { Link } from "wouter";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";

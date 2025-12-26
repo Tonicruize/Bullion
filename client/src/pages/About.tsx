@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Search, MapPin, Users, Briefcase, Building } from "lucide-react";
 import teamImage from "@assets/generated_images/professional_financial_team_meeting_in_glass_office.png";
-import officeImage from "@assets/generated_images/elegant_financial_office_reception_area.png";
+import officeImage from "@assets/auth-banner_1766754930923.jpg";
 
 export default function About() {
   return (
