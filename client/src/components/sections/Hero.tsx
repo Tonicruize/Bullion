@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, TrendingUp, Building2, Globe, Shield, Scale, Clock, Award } from "lucide-react";
+import { ArrowRight, CheckCircle2, TrendingUp, Building2, Globe, Shield, Scale, Clock, Award, FileText } from "lucide-react";
 import heroImage from "@assets/generated_images/modern_london_financial_district_skyline_at_dusk_with_blue_and_gold_tones.png";
-import officeImage from "@assets/generated_images/elegant_financial_office_reception_area.png";
+import officeImage from "@assets/generated_images/modern_office_reception_with_elite_bonds_group_gold_logo.png";
+import certificateImage from "@assets/generated_images/certificate_of_incorporation_for_elite_bonds_group.png";
 import { Link } from "wouter";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 export function Hero() {
   return (
@@ -133,12 +135,23 @@ export function Introduction() {
                  </div>
               </div>
 
-              <div className="mt-12">
+              <div className="mt-12 flex gap-4">
                  <Link href="/about">
                     <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 h-12 text-base rounded-sm">
                        Learn More About Us
                     </Button>
                  </Link>
+                 
+                 <Dialog>
+                   <DialogTrigger asChild>
+                     <Button variant="ghost" className="h-12 text-base text-muted-foreground hover:text-primary gap-2">
+                       <FileText className="h-5 w-5" /> View Certificate
+                     </Button>
+                   </DialogTrigger>
+                   <DialogContent className="max-w-3xl bg-white p-0 overflow-hidden border-none">
+                     <img src={certificateImage} alt="Certificate of Incorporation" className="w-full h-auto" />
+                   </DialogContent>
+                 </Dialog>
               </div>
            </div>
         </div>
