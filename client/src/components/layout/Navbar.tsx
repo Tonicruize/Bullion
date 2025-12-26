@@ -32,7 +32,7 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-[100] transition-all duration-300",
         isScrolled || location !== "/"
           ? "bg-background/95 backdrop-blur-md shadow-sm py-3 border-b border-border/50"
           : "bg-transparent py-6 border-b border-white/10"
@@ -43,7 +43,7 @@ export function Navbar() {
         <Link href="/">
           <a className="flex items-center gap-3 group relative z-50">
             <div className={cn("rounded-sm overflow-hidden transition-all duration-300", isTransparent ? "shadow-lg" : "")}>
-              <img src={logoImage} alt="Elite Bonds Group Logo" className="h-10 lg:h-12 w-auto object-contain" />
+              <img src={logoImage} alt="Elite Bonds Group Logo" className="h-6 lg:h-8 w-auto object-contain" />
             </div>
           </a>
         </Link>
@@ -143,12 +143,12 @@ export function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl animate-in slide-in-from-right-10 flex flex-col">
+        <div className="fixed inset-0 z-[100] bg-background backdrop-blur-xl animate-in slide-in-from-right-10 flex flex-col">
           {/* Header for Mobile Menu */}
           <div className="flex items-center justify-between px-6 py-6 border-b border-border/50">
             <Link href="/">
               <a className="flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
-                 <img src={logoImage} alt="Elite Bonds Group Logo" className="h-10 w-auto object-contain" />
+                 <img src={logoImage} alt="Elite Bonds Group Logo" className="h-6 w-auto object-contain" />
               </a>
             </Link>
             <button
