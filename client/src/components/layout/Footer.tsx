@@ -1,5 +1,5 @@
 import { Shield } from "lucide-react";
-import logoImage from "@assets/generated_images/luxury_gold_geometric_shield_logo_on_navy_blue.png";
+import logoImage from "@assets/Untitled-1_1766750699566.png";
 
 export function Footer() {
   return (
@@ -9,10 +9,9 @@ export function Footer() {
           
           <div className="md:col-span-1 space-y-6">
             <div className="flex items-center gap-2">
-              <div className="rounded-sm overflow-hidden">
-                <img src={logoImage} alt="Elite Bonds Group" className="h-8 w-8 object-contain" />
+              <div className="rounded-sm overflow-hidden bg-white/5 p-2">
+                <img src={logoImage} alt="Elite Bonds Group" className="h-12 w-auto object-contain" />
               </div>
-              <span className="font-serif text-lg font-bold">ELITE BONDS GROUP</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
               Premier investment solutions for the modern investor. Providing stability, growth, and trust since 2008.

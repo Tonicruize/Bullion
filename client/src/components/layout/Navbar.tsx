@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import logoImage from "@assets/generated_images/luxury_gold_geometric_shield_logo_on_navy_blue.png";
+import logoImage from "@assets/Untitled-1_1766750699566.png";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -43,15 +43,7 @@ export function Navbar() {
         <Link href="/">
           <a className="flex items-center gap-3 group relative z-50">
             <div className={cn("rounded-sm overflow-hidden transition-all duration-300", isTransparent ? "shadow-lg" : "")}>
-              <img src={logoImage} alt="Elite Bonds Group Logo" className="h-10 w-10 object-contain" />
-            </div>
-            <div className="flex flex-col">
-              <span className={cn("font-serif text-xl font-bold tracking-tight leading-none transition-colors", isTransparent ? "text-white" : "text-foreground")}>
-                ELITE BONDS
-              </span>
-              <span className={cn("text-[0.65rem] uppercase tracking-[0.2em] font-medium transition-colors", isTransparent ? "text-white/80" : "text-muted-foreground")}>
-                GROUP
-              </span>
+              <img src={logoImage} alt="Elite Bonds Group Logo" className="h-16 w-auto object-contain" />
             </div>
           </a>
         </Link>
