@@ -43,7 +43,7 @@ export function Navbar() {
         <Link href="/">
           <a className="flex items-center gap-3 group relative z-50">
             <div className={cn("rounded-sm overflow-hidden transition-all duration-300", isTransparent ? "shadow-lg" : "")}>
-              <img src={logoImage} alt="Elite Bonds Group Logo" className="h-16 w-auto object-contain" />
+              <img src={logoImage} alt="Elite Bonds Group Logo" className="h-10 lg:h-12 w-auto object-contain" />
             </div>
           </a>
         </Link>
@@ -143,41 +143,53 @@ export function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-background/98 backdrop-blur-xl animate-in slide-in-from-right-10 flex flex-col pt-24 px-6">
-          <div className="flex flex-col gap-6 text-center">
-            <Link href="/solutions">
-              <a className="text-2xl font-serif font-bold text-foreground" onClick={() => setMobileMenuOpen(false)}>Investment Solutions</a>
+        <div className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl animate-in slide-in-from-right-10 flex flex-col">
+          {/* Header for Mobile Menu */}
+          <div className="flex items-center justify-between px-6 py-6 border-b border-border/50">
+            <Link href="/">
+              <a className="flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
+                 <img src={logoImage} alt="Elite Bonds Group Logo" className="h-10 w-auto object-contain" />
+              </a>
             </Link>
-            <div className="flex flex-col gap-2 pl-4 text-base text-muted-foreground border-l border-border/50 ml-8 text-left">
-               <Link href="/solutions#corporate"><a onClick={() => setMobileMenuOpen(false)}>Corporate Bonds</a></Link>
-               <Link href="/solutions#green"><a onClick={() => setMobileMenuOpen(false)}>Green Energy</a></Link>
-               <Link href="/solutions#property"><a onClick={() => setMobileMenuOpen(false)}>Property Bonds</a></Link>
-            </div>
+            <button
+              className="p-2 text-foreground"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
 
-            <Link href="/about">
-              <a className="text-2xl font-serif font-bold text-foreground" onClick={() => setMobileMenuOpen(false)}>About Us</a>
+          <div className="flex flex-col gap-6 px-6 pt-8 pb-12 overflow-y-auto">
+            <Link href="/solutions">
+              <a className="text-xl font-serif font-bold text-foreground hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>Investment Solutions</a>
             </Link>
-            <div className="flex flex-col gap-2 pl-4 text-base text-muted-foreground border-l border-border/50 ml-8 text-left">
-               <Link href="/about#team"><a onClick={() => setMobileMenuOpen(false)}>Team</a></Link>
-               <Link href="/about#offices"><a onClick={() => setMobileMenuOpen(false)}>Offices</a></Link>
+            
+            <Link href="/about">
+              <a className="text-xl font-serif font-bold text-foreground hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>About Us</a>
+            </Link>
+            <div className="flex flex-col gap-3 pl-4 border-l-2 border-accent/20 ml-2">
+               <Link href="/about#team"><a className="text-base text-muted-foreground hover:text-foreground transition-colors" onClick={() => setMobileMenuOpen(false)}>Our Team</a></Link>
+               <Link href="/about#offices"><a className="text-base text-muted-foreground hover:text-foreground transition-colors" onClick={() => setMobileMenuOpen(false)}>Global Offices</a></Link>
             </div>
 
             <Link href="/approach">
-              <a className="text-2xl font-serif font-bold text-foreground" onClick={() => setMobileMenuOpen(false)}>Our Approach</a>
+              <a className="text-xl font-serif font-bold text-foreground hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>Our Approach</a>
             </Link>
+            
             <Link href="/insights">
-              <a className="text-2xl font-serif font-bold text-foreground" onClick={() => setMobileMenuOpen(false)}>Insights</a>
+              <a className="text-xl font-serif font-bold text-foreground hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>Insights</a>
             </Link>
+            
             <Link href="/contact">
-              <a className="text-2xl font-serif font-bold text-foreground" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+              <a className="text-xl font-serif font-bold text-foreground hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact</a>
             </Link>
 
-            <div className="flex flex-col gap-4 mt-8">
+            <div className="mt-auto pt-8 flex flex-col gap-4">
               <Link href="/login">
-                <Button variant="outline" className="w-full h-12 text-lg">Client Login</Button>
+                <Button variant="outline" className="w-full h-12 text-lg font-medium border-primary/20 hover:bg-muted">Client Login</Button>
               </Link>
               <Link href="/contact">
-                <Button className="w-full h-12 text-lg bg-accent text-white">Enquire Now</Button>
+                <Button className="w-full h-12 text-lg bg-accent text-white hover:bg-accent/90 shadow-lg font-medium">Enquire Now</Button>
               </Link>
             </div>
           </div>
