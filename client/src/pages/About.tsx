@@ -154,9 +154,11 @@ export default function About() {
             <p className="text-white/70 max-w-2xl mx-auto mb-8">
               We are always looking for exceptional talent to join our London and Edinburgh offices.
             </p>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-              View Careers
-            </Button>
+            <a href="mailto:info@elitebondsgroup.com?subject=Career%20Inquiry">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                View Careers
+              </Button>
+            </a>
           </div>
         </section>
       </main>

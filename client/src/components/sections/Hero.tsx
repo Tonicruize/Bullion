@@ -38,7 +38,7 @@ export function Hero() {
           
           <p className="text-xl md:text-2xl text-white/80 mb-10 leading-relaxed max-w-2xl font-light">
             Exclusive access to institutional-grade fixed income bonds. 
-            Achieve predictable yields of <span className="text-white font-semibold">7.5% - 9.5% p.a.</span> with asset-backed security.
+            Achieve predictable yields of <span className="text-white font-semibold">over 100% - 500%</span> with asset-backed security.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5 mb-16">

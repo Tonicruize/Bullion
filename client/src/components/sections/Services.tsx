@@ -1,5 +1,6 @@
 import { Shield, TrendingUp, PieChart, Landmark, Leaf, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 const services = [
   {
@@ -68,9 +69,11 @@ export function Services() {
                 ))}
               </ul>
 
-              <Button variant="outline" className="w-full group-hover:border-accent group-hover:text-accent transition-colors">
-                Learn More
-              </Button>
+              <Link href="/solutions">
+                <Button variant="outline" className="w-full group-hover:border-accent group-hover:text-accent transition-colors">
+                  Learn More
+                </Button>
+              </Link>
             </div>
           ))}
         </div>
