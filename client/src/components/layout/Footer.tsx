@@ -1,5 +1,6 @@
 import { Shield } from "lucide-react";
 import logoImage from "@assets/Untitled-1_1766750699566.png";
+import { Link } from "wouter";
 
 export function Footer() {
   return (
@@ -26,11 +27,11 @@ export function Footer() {
           <div className="md:col-span-1">
             <h4 className="font-serif font-bold text-lg mb-6 text-white">Quick Links</h4>
             <ul className="space-y-4 text-sm text-slate-400">
-              <li><a href="#" className="hover:text-accent transition-colors">Home</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Investment Products</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Latest Insights</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Contact Us</a></li>
+              <li><Link href="/" className="hover:text-accent transition-colors cursor-pointer">Home</Link></li>
+              <li><Link href="/about" className="hover:text-accent transition-colors cursor-pointer">About Us</Link></li>
+              <li><Link href="/solutions" className="hover:text-accent transition-colors cursor-pointer">Investment Products</Link></li>
+              <li><Link href="/insights" className="hover:text-accent transition-colors cursor-pointer">Latest Insights</Link></li>
+              <li><Link href="/contact" className="hover:text-accent transition-colors cursor-pointer">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -51,7 +52,7 @@ export function Footer() {
                Have questions? Our team is available Mon-Fri, 9am-6pm.
              </p>
              <p className="text-accent text-lg font-medium mb-2">+44 (0) 20 7123 4567</p>
-             <p className="text-slate-400 text-sm">info@elitebondsgroup.com</p>
+             <a href="mailto:info@elitebondsgroup.com" className="text-slate-400 text-sm hover:text-accent transition-colors">info@elitebondsgroup.com</a>
           </div>
         </div>
 
