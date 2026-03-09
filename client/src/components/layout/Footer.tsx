@@ -54,17 +54,7 @@ export function Footer() {
              <p className="text-accent text-lg font-medium mb-2">+44 (0) 20 7123 4567</p>
              <p className="text-accent text-lg font-medium mb-2">+1(505)985 0004</p>
              <a href="mailto:info@elitebondsgroup.com" className="text-slate-400 text-sm hover:text-accent transition-colors">info@elitebondsgroup.com</a>
-             <div>
-        <Button 
-          onClick={() => {
-            window.open("https://wa.me/15059850004", "_blank");
-          }}
-          className="bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-sm text-lg font-semibold shadow-md transition-colors"
-        >
-          WhatsApp Us
-        </Button>
-      </div>
-          </div>
+                    </div>
         </div>
 
         <div className="border-t border-white/10 pt-10 text-xs text-slate-500 text-justify leading-relaxed">
