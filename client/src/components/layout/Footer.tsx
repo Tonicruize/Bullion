@@ -52,7 +52,7 @@ export function Footer() {
                Have questions? Our team is available Mon-Fri, 9am-6pm.
              </p>
              <p className="text-accent text-lg font-medium mb-2">+44 (0) 20 7123 4567</p>
-             <p className="text-accent text-lg font-medium mb-2">+1(505)985 0004</p>
+             <p className="text-accent text-lg font-medium mb-2">+1 (505) 985 0004 (Whatsapp)</p>
              <a href="mailto:info@elitebondsgroup.com" className="text-slate-400 text-sm hover:text-accent transition-colors">info@elitebondsgroup.com</a>
                     </div>
         </div>
